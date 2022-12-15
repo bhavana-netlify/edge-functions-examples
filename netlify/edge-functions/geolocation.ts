@@ -2,7 +2,7 @@
 import { Context } from "https://edge.netlify.com";
 
 export default async (request: Request, context: Context) => {
-console.log(request.body);
+context.log("Geo header function called: ", JSON.stringify(context.geo));
   // Here's what's available on context.geo
 
   // context: {
