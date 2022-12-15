@@ -1,6 +1,8 @@
+// deno-lint-ignore-file
 import { Context } from "https://edge.netlify.com";
 
 export default async (request: Request, context: Context) => {
+console.log(request.body);
   // Here's what's available on context.geo
 
   // context: {
@@ -19,7 +21,7 @@ export default async (request: Request, context: Context) => {
   //     timezone?: string;
   //   }
   // }
-
+ 
   return context.json({
     geo: context.geo,
     header: request.headers.get("x-nf-geo"),
