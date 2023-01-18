@@ -48,6 +48,8 @@ export default async (request: Request, context: Context) => {
     geo: context.geo,
     header: request.headers.get("x-nf-geo"),
   });
+  
+  console.log(`Hello from ${context.deploy.id}!`);
 };</code></pre>
       <h2>See this in action</h2>
       <ul>
